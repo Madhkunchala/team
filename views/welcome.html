@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+</head>
+<body>
+    <h1>Welcome to Our Website  <span id="username"></span>!</h1>
+    <p>Hello, <span id="username"></span>! You have successfully logged in. This is your welcome page.</p>
+    <p>Feel free to explore our website's features and content.</p>
+    <p><a href="/">Go back to the main page</a></p>
+
+    <script>
+      // JavaScript code to retrieve and display the username
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      const username = urlParams.get('username');
+      
+      // Display the username in the HTML
+      document.getElementById('username').textContent = username;
+    </script>
+</body>
+</html>
